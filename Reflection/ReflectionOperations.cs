@@ -81,8 +81,6 @@ public static class ReflectionOperations
     /// <exception cref="ArgumentNullException">Thrown when obj is null.</exception>
     public static string?[] GetConstructorsDataDetails(object? obj)
     {
-        ArgumentNullException.ThrowIfNull(obj);
-
         throw new NotImplementedException("This method is not implemented yet.");
     }
 
