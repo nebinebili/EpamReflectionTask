@@ -63,10 +63,10 @@ public static class ReflectionOperations
     }
 
     /// <summary>
-    /// Gets all interface details of the specified object.
+    /// Gets all full names of the interfaces implemented by the specified object.
     /// </summary>
     /// <param name="obj">The object to get interface details from.</param>
-    /// <returns>An array of strings containing interface details.</returns>
+    /// <returns>An array of strings containing the full names of the interfaces implemented by the specified object.</returns>
     /// <exception cref="ArgumentNullException">Thrown when obj is null.</exception>
     public static string?[] GetInterfaceDataDetails(object? obj)
     {
