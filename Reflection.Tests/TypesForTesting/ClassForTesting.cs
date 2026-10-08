@@ -1,6 +1,5 @@
 namespace Reflection.Tests.TypesForTesting
 {
-
     public class ClassForTesting
     {
         public const int StaticIntField = 10;
