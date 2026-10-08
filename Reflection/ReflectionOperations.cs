@@ -17,6 +17,7 @@ namespace Reflection
         /// <exception cref="ArgumentNullException">Thrown when obj is null.</exception>
         public static string GetTypeName(object? obj)
         {
+            ArgumentNullException.ThrowIfNull(obj, nameof(obj));
             Type type = obj.GetType();
 
             return type.Name;
@@ -54,6 +55,7 @@ namespace Reflection
         /// <exception cref="ArgumentNullException">Thrown when obj is null.</exception>
         public static string[] GetPrivateInstanceFields(object? obj)
         {
+            ArgumentNullException.ThrowIfNull(obj, nameof(obj));
             Type type = obj.GetType();
 
             FieldInfo[] fields = type.GetFields(BindingFlags.NonPublic | BindingFlags.Instance);
@@ -69,6 +71,7 @@ namespace Reflection
         /// <exception cref="ArgumentNullException">Thrown when obj is null.</exception>
         public static string[] GetPublicStaticFields(object? obj)
         {
+            ArgumentNullException.ThrowIfNull(obj, nameof(obj));
             Type type = obj.GetType();
 
             FieldInfo[] fields = type.GetFields(BindingFlags.Public | BindingFlags.Static);
@@ -84,6 +87,7 @@ namespace Reflection
         /// <exception cref="ArgumentNullException">Thrown when obj is null.</exception>
         public static string?[] GetInterfaceDataDetails(object? obj)
         {
+            ArgumentNullException.ThrowIfNull(obj, nameof(obj));
             Type type = obj.GetType();
 
             Type[] typeInterfaces = type.GetInterfaces();
@@ -99,6 +103,7 @@ namespace Reflection
         /// <exception cref="ArgumentNullException">Thrown when obj is null.</exception>
         public static string?[] GetConstructorsDataDetails(object? obj)
         {
+            ArgumentNullException.ThrowIfNull(obj, nameof(obj));
             Type type = obj.GetType();
 
             ConstructorInfo[] constructors = type.GetConstructors();
@@ -114,6 +119,7 @@ namespace Reflection
         /// <exception cref="ArgumentNullException">Thrown when obj is null.</exception>
         public static string?[] GetTypeMembersDataDetails(object? obj)
         {
+            ArgumentNullException.ThrowIfNull(obj, nameof(obj));
             Type type = obj.GetType();
 
             MemberInfo[] members = type.GetMembers();
@@ -129,6 +135,7 @@ namespace Reflection
         /// <exception cref="ArgumentNullException">Thrown when obj is null.</exception>
         public static string?[] GetMethodDataDetails(object? obj)
         {
+            ArgumentNullException.ThrowIfNull(obj, nameof(obj));
             Type type = obj.GetType();
 
             MethodInfo[] methods = type.GetMethods();
@@ -144,6 +151,7 @@ namespace Reflection
         /// <exception cref="ArgumentNullException">Thrown when obj is null.</exception>
         public static string?[] GetPropertiesDataDetails(object? obj)
         {
+            ArgumentNullException.ThrowIfNull(obj, nameof(obj));
             Type type = obj.GetType();
 
             PropertyInfo[] properties = type.GetProperties();
