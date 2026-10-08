@@ -1,5 +1,5 @@
-namespace Reflection.Tests.TypesForTesting;
-
+namespace Reflection.Tests.TypesForTesting
+{
 public class Employee : IEmployee
 {
     public Employee(int id, string name, int age, string role, int annualSalary, int salaryPerYear)
@@ -34,4 +34,5 @@ public class Employee : IEmployee
     public string GetDetails() => $"Id: {this.Id}, Name: {this.Name}, Age: {this.Age}, AnnualSalary: {this.AnnualSalary}";
 
     public int GetSalaryPerMonth() => this.AnnualSalary / 12;
+}
 }

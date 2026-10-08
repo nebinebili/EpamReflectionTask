@@ -1,6 +1,8 @@
-﻿namespace Reflection.Tests.TypesForTesting;
-
-public interface IEmployee
+namespace Reflection.Tests.TypesForTesting
 {
-    string GetOrganizationName();
+
+    public interface IEmployee
+    {
+        string GetOrganizationName();
+    }
 }

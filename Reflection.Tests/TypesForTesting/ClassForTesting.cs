@@ -1,21 +1,23 @@
-﻿namespace Reflection.Tests.TypesForTesting;
-
-public class ClassForTesting
+namespace Reflection.Tests.TypesForTesting
 {
-    public const int StaticIntField = 10;
 
-    private int intField;
-
-    public ClassForTesting()
-        : this(0)
+    public class ClassForTesting
     {
-    }
+        public const int StaticIntField = 10;
 
-    public ClassForTesting(int intValue) => this.intField = intValue;
+        private int intField;
 
-    public int IntValue
-    {
-        get => this.intField;
-        set => this.intField = value < 0 ? throw new ArgumentOutOfRangeException(nameof(value)) : value;
+        public ClassForTesting()
+            : this(0)
+        {
+        }
+
+        public ClassForTesting(int intValue) => this.intField = intValue;
+
+        public int IntValue
+        {
+            get => this.intField;
+            set => this.intField = value < 0 ? throw new ArgumentOutOfRangeException(nameof(value)) : value;
+        }
     }
 }
